@@ -1,6 +1,7 @@
 import time
 import pytest
 import allure
+from allure_commons.types import AttachmentType
 
 from base.base_analyze import analyze_file
 from base.base_driver import init_driver
@@ -31,7 +32,7 @@ class TestLogin:
         self.page.register.click_login()
         self.page.login.input_username(username)
         self.page.login.input_password(password)
-        allure.attach("")
+        allure.attach(self.driver.get_screenshot_as_png(),name="图片", attachment_type=allure.attachment_type.PNG)
         self.page.login.click_login()
 
         if toast is None:

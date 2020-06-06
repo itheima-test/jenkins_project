@@ -31,5 +31,4 @@ class LoginPage(BaseAction):
     # 点击 登录
     @allure.step(title='登录 点击 登录')
     def click_login(self):
-        allure.attach("截图：", self.driver.get_screenshot_as_png())
         self.click(self.login_button)
