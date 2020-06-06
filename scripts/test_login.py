@@ -1,5 +1,6 @@
 import time
 import pytest
+import allure
 
 from base.base_analyze import analyze_file
 from base.base_driver import init_driver
@@ -17,7 +18,7 @@ class TestLogin:
         self.driver.quit()
 
     @pytest.mark.parametrize("args", analyze_file("login_data.yaml", "test_login"))
-    # @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_login(self, args):
 
         # 解析 yaml 的数据
