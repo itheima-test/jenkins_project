@@ -13,5 +13,5 @@ def init_driver(no_reset=True):
     # 是否重置应用 True:不重置 False:重置
     desired_caps['noReset'] = no_reset
 
-    driver = webdriver.Remote('http://192.168.15.25:4723/wd/hub', desired_caps)
+    driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
     return driver
