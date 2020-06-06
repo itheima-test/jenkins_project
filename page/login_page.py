@@ -19,13 +19,13 @@ class LoginPage(BaseAction):
     # 输入 用户名
     @allure.step(title='登录 输入 用户名')
     def input_username(self, text):
-        allure.attach("用户名:", text)
+        allure.attach(text, "输入的用户名:")
         self.input(self.username_edit_text, text)
 
     # 输入 密码
     @allure.step(title='登录 输入 密码')
     def input_password(self, text):
-        allure.attach("密码:", text)
+        allure.attach(text, "输入的密码：")
         self.input(self.password_edit_text, text)
 
     # 点击 登录
