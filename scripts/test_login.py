@@ -17,7 +17,7 @@ class TestLogin:
         self.driver.quit()
 
     @pytest.mark.parametrize("args", analyze_file("login_data.yaml", "test_login"))
-    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
+    # @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     def test_login(self, args):
 
         # 解析 yaml 的数据
