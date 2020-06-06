@@ -31,6 +31,7 @@ class TestLogin:
         self.page.register.click_login()
         self.page.login.input_username(username)
         self.page.login.input_password(password)
+        allure.attach("")
         self.page.login.click_login()
 
         if toast is None:
